@@ -24,11 +24,27 @@ Portable targets:
 
 Usage
 -----
-//TODO
+For released version V1.0 Open Location Code
+var myOpenLocationCode = "";
+var olc = new ASOL.OpenLocationCode.OpenLocationCode(myOpenLocationCode);
+if (olc.IsValid)
+{
+  var longitude = olc.Longitude;
+  var latitude = olc.Latitude;
+  
+ var olc2 = new ASOL.OpenLocationCode.OpenLocationCode(latitude, longitude);
+ var code = olc2.Code;
+}
 
-Installation
-------------
-//TODO
+For any next format use optional parameter
+* new ASOL.OpenLocationCode.OpenLocationCode(myOpenLocationCode, ASOL.OpenLocationCode.FormatVersion.VNext);
+
+Conversion between two Open Location Code format version
+var myOpenLocationCodeVNext = "9F2P2CQH+WWH";
+var olcVNext = new ASOL.OpenLocationCode.OpenLocationCode(myOpenLocationCode, ASOL.OpenLocationCode.FormatVersion.VNext);
+var olcV1 = olcV1.ConvertToFormatVersion(ASOL.OpenLocationCode.FormatVersion.V1);
+if (olcV1.Code != olcVNext.Code) { }
+
 
 Original code by Google
 -----------------------
