@@ -20,7 +20,10 @@ Portable targets:
 * Windows 8
 * Windows Phone 8.1
 * ASP.NET Core 5
- 
+
+Install
+-----
+Nuget Package https://www.nuget.org/packages/ASOL.OpenLocationCode/
 
 Usage
 -----
