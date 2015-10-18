@@ -11,6 +11,17 @@ http://openlocationcode.com
 
 Open Location Codes were developed at Google's Zurich engineering office, and then open sourced so that they can be freely used.
 
+Platform
+-----
+Implementation Open Location Code as portable .NET library. 
+
+Portable targets:
+* .NET Framework 4.5
+* Windows 8
+* Windows Phone 8.1
+* ASP.NET Core 5
+ 
+
 Usage
 -----
 //TODO
