@@ -45,9 +45,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CodeAreaTest.cs" />
+    <Compile Include="EncodingTest.cs" />
+    <Compile Include="FormatConvertionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShortFullTest.cs" />
+    <Compile Include="ValidationTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Data\V1\EncodingTests.csv" />
+    <Resource Include="Data\V1\ShortCodeTests.csv" />
+    <Resource Include="Data\V1\ValidityTests.csv" />
+    <Resource Include="Data\VNext\EncodingTests.csv" />
+    <Resource Include="Data\VNext\ShortCodeTests.csv" />
+    <Resource Include="Data\VNext\ValidityTests.csv" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

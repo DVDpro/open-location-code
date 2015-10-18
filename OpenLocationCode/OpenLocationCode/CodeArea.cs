@@ -57,12 +57,12 @@ namespace ASOL.OpenLocationCode
         /// <summary>
         /// The latitude of the center in degrees. 
         /// </summary>
-        public decimal LatitudeCenter { get; private set; }
+        public decimal LatitudeCenter { get; internal set; }
 
         /// <summary>
         /// The longitude of the center in degrees. 
         /// </summary>
-        public decimal LongitudeCenter { get; private set; }
+        public decimal LongitudeCenter { get; internal set; }
 
         /// <summary>
         /// Coordinates of a decoded Open Location Code.
