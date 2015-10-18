@@ -1,6 +1,7 @@
 language: csharp
 solution: ./OpenLocationCode/OpenLocationCode.sln
 install: 
+  - nuget restore ./OpenLocationCode/OpenLocationCode.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release OpenLocationCode/OpenLocationCode.sln
