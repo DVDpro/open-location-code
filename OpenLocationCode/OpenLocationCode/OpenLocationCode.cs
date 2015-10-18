@@ -36,7 +36,7 @@ namespace ASOL.OpenLocationCode
         /// <summary>
         /// Current Open location code version
         /// </summary>
-        public FormatVersion Version { get; }
+        public FormatVersion CurrentVersion { get; }
 
         /// <summary>
         /// Create open location code with <see cref="DefaultFormatVersion"/>
@@ -52,7 +52,7 @@ namespace ASOL.OpenLocationCode
         /// <param name="formatVersion"></param>
         public OpenLocationCode(FormatVersion formatVersion)
         {
-            Version = formatVersion;
+            CurrentVersion = formatVersion;
             switch (formatVersion)
             {
                 case FormatVersion.V1:
@@ -282,7 +282,7 @@ namespace ASOL.OpenLocationCode
         /// </returns>
         public OpenLocationCode RecoverNearest(decimal? referenceLatitude = null, decimal? referenceLongitude = null)
         {
-            return new OpenLocationCode(_provider.RecoverNearest(Code, referenceLatitude ?? Latitude, referenceLongitude ?? Longitude), Version);
+            return new OpenLocationCode(_provider.RecoverNearest(Code, referenceLatitude ?? Latitude, referenceLongitude ?? Longitude), CurrentVersion);
         }
 
         /// <summary>
@@ -302,7 +302,7 @@ namespace ASOL.OpenLocationCode
         /// <remarks>Supported only v1.0 format version</remarks>
         public OpenLocationCode ShortenBy4(decimal? latitude = null, decimal? longitude = null)
         {
-            return new OpenLocationCode(_provider.ShortenBy4(Code, latitude ?? Latitude, longitude ?? Longitude), Version);
+            return new OpenLocationCode(_provider.ShortenBy4(Code, latitude ?? Latitude, longitude ?? Longitude), CurrentVersion);
         }
 
         /// <summary>
@@ -322,7 +322,7 @@ namespace ASOL.OpenLocationCode
         /// <remarks>Supported only v1.0 format version</remarks>
         public OpenLocationCode ShortenBy6(decimal? latitude = null, decimal? longitude = null)
         {
-            return new OpenLocationCode(_provider.ShortenBy6(Code, latitude ?? Latitude, longitude ?? Longitude), Version);
+            return new OpenLocationCode(_provider.ShortenBy6(Code, latitude ?? Latitude, longitude ?? Longitude), CurrentVersion);
         }
 
         /// <summary>
@@ -345,7 +345,7 @@ namespace ASOL.OpenLocationCode
         /// <remarks>Supported only VNext format version</remarks>
         public OpenLocationCode Shorten(decimal? latitude = null, decimal? longitude = null)
         {
-            return new OpenLocationCode(_provider.Shorten(Code, latitude ?? Latitude, longitude ?? Longitude), Version);
+            return new OpenLocationCode(_provider.Shorten(Code, latitude ?? Latitude, longitude ?? Longitude), CurrentVersion);
         }
 
         /// <summary>
