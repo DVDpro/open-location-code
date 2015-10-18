@@ -53,5 +53,23 @@ namespace OpenLocationCode.Test
             Assert.AreNotEqual(codeV1.Code, codeVNext.Code, "code");
         }
 
+        [Test]
+        public void BackwardCodeTest()
+        {
+            var myOpenLocationCode = "9F2P2CQH+WWH";
+            var codeVNext = new ASOL.OpenLocationCode.OpenLocationCode(myOpenLocationCode, ASOL.OpenLocationCode.FormatVersion.VNext);
+            var codeV1 = codeVNext.ConvertToFormatVersion(ASOL.OpenLocationCode.FormatVersion.V1);
+            Console.WriteLine("Code V1> " + codeV1.Code);
+            Console.WriteLine("Code VNext> " + codeVNext.Code);
+        }
+
+        [Test]
+        public void ForwardCodeTest()
+        {
+            var myOpenLocationCode = "+9F2P.2CQHWWH";
+            var codeV1 = new ASOL.OpenLocationCode.OpenLocationCode(myOpenLocationCode, ASOL.OpenLocationCode.FormatVersion.V1);
+            var codeVNext = codeV1.ConvertToFormatVersion(ASOL.OpenLocationCode.FormatVersion.VNext);
+        }
+
     }
 }
