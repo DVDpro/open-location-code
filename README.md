@@ -25,7 +25,8 @@ Portable targets:
 Usage
 -----
 For released version V1.0 Open Location Code
-var myOpenLocationCode = "";
+```cs
+var myOpenLocationCode = "+9F2P.2CQHWWH";
 var olc = new ASOL.OpenLocationCode.OpenLocationCode(myOpenLocationCode);
 if (olc.IsValid)
 {
@@ -35,16 +36,20 @@ if (olc.IsValid)
  var olc2 = new ASOL.OpenLocationCode.OpenLocationCode(latitude, longitude);
  var code = olc2.Code;
 }
+```
 
-For any next format use optional parameter
-* new ASOL.OpenLocationCode.OpenLocationCode(myOpenLocationCode, ASOL.OpenLocationCode.FormatVersion.VNext);
+For any next format use optional parameter with FormatVersion
+```cs
+var olc = new ASOL.OpenLocationCode.OpenLocationCode(myOpenLocationCode, ASOL.OpenLocationCode.FormatVersion.VNext);
+```
 
 Conversion between two Open Location Code format version
+```cs
 var myOpenLocationCodeVNext = "9F2P2CQH+WWH";
 var olcVNext = new ASOL.OpenLocationCode.OpenLocationCode(myOpenLocationCode, ASOL.OpenLocationCode.FormatVersion.VNext);
 var olcV1 = olcV1.ConvertToFormatVersion(ASOL.OpenLocationCode.FormatVersion.V1);
 if (olcV1.Code != olcVNext.Code) { }
-
+```
 
 Original code by Google
 -----------------------
