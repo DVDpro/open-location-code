@@ -12,10 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// .Net port of Google Open Location Codes.
+// Open Location Codes are short, generated codes that can be used like street addresses, for places where street addresses don't exist.
+// Open Location Codes were developed at Google's Zurich engineering office, and then open sourced so that they can be freely used.
+// http://openlocationcode.com. 
+
 using System.Resources;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -29,6 +34,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]
+[assembly: ComVisible(false)]
+[assembly: CLSCompliant(true)]
 
 // Version information for an assembly consists of the following four values:
 //
