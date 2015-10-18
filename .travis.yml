@@ -5,4 +5,3 @@ install:
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release OpenLocationCode/OpenLocationCode.sln
-  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./OpenLocationCode/OpenLocationCode.Test/bin/Release/OpenLocationCode.Test.dll
