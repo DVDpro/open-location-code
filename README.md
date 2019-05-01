@@ -1,3 +1,5 @@
+### This implementation is obsolete. Use https://github.com/JonMcPherson/open-location-code implementation instead.
+
 # open-location-code
 =======================
 
